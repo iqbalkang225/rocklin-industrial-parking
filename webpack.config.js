@@ -3,7 +3,7 @@ const PugPlugin = require('pug-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   output: {
     path: path.join(__dirname, 'public/'),
     publicPath: '/',
