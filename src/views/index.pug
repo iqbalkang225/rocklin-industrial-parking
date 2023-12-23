@@ -1,12 +1,19 @@
 doctype html
-html(lang='en')
- head
-  title Hello, hell
+html(lang="en")
+  head
 
-  link(rel='stylesheet' href=require('css/styles.css'))
-  script(src=require('js/app.js') defer='defer')
+  //-  meta(charset="UTF-8")
+  //-  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    base(href="/")
 
- body.bg-green-500
-   h1 Hello,  world
-   div.remark
-     p Pug rock yes ph
+    title Trendiva
+
+
+    link(rel='stylesheet' href=require('css/styles.css'))
+    script(src=require('js/app.js') defer='defer')
+
+  body.bg-green-500
+    include partials/navigation
+
+    main.bg-red-400.h-screen.text-2xl
+      h1 welcome to the site

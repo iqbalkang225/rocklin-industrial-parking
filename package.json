@@ -10,11 +10,13 @@
   "author": "iqbal kang",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-pug": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "postcss": "^8.4.32",
     "postcss-loader": "^7.3.3",
+    "prettier": "^3.1.1",
     "pug-plugin": "^4.9.9",
     "tailwindcss": "^3.4.0",
     "webpack": "^5.89.0",
