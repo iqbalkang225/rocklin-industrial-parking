@@ -1,0 +1,7 @@
+mixin section-heading(title)
+  - const headingContainer = title ? 'space-y-4 mb-8 lg:mb-0' : '.space-y-4'
+  
+  div(class=headingContainer)
+    if(title)
+      h2.font-accent.text-3xl!= title
+    div.heading-svg.flex
