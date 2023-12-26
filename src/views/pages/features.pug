@@ -4,23 +4,24 @@ include ../partials/section-heading
 
 - const featuresSection = `container-custom grid md:grid-cols-[1.5fr,2fr]`
 
-- const featureContainer = `flex items-center gap-4 py-6 lg:gap-12 lg:p-12 border-t-2 border-blackish/15`
+- const featureContainer = `flex items-center gap-4 px-4 py-6 lg:gap-12 lg:p-12 border-t-2 border-blackish/15`
 
-- const featureSpan = `font-accent text-5xl min-w-12`
+- const featureSpan = `font-accent text-3xl lg:text-5xl min-w-8 lg:min-w-12`
 
-- const featureDividerContainer = `w-1.5 h-48 sm:h-32 bg-blackish/15 relative overflow-hidden`
+- const featureDividerContainer = `w-1.5 h-32 bg-blackish/15 relative overflow-hidden`
 
 - const featureDivider = `w-full h-1/2 bg-blackish -translate-y-full`
 
 - const featureText = `space-y-2 lg:space-y-4`
 
-- const featureHeading = `font-extrabold text-2xl`
+- const featureHeading = `font-extrabold text-xl lg:text-2xl`
 
 
 
 section(class=featuresSection)#features
 
-  +section-heading('Our reasons for being <br /> your best choice')
+  div#features-heading
+    +section-heading('Our reasons for being <br /> your best choice')
 
   div 
     each feature, index in featuresData 

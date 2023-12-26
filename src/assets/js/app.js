@@ -58,9 +58,8 @@ const render = () => {
 
     ScrollTrigger.create({
       trigger: svg,
-      // markers: true,
       animation: gsap.from(svg.children, { scaleX: 0, stagger: 0.1, transformOrigin: 'left center', ease: 'back' }),
-      start: 'top 50%',
+      start: 'top 80%',
       toggleActions: 'play none none reverse',
     });
   });
@@ -68,28 +67,42 @@ const render = () => {
 
 render();
 
-const features = document.querySelectorAll('[data-feature]');
-
-// features.forEach((feature) => {
-//   const line = feature.querySelector('[data-feature-divider]');
-//   console.log(line);
-//   ScrollTrigger.create({
-//     trigger: feature,
-//     markers: true,
-//     animation: gsap.to(line, { yPercent: 350 }),
-//     start: 'top 80%',
-//     end: 'bottom 80%',
-//     scrub: 1,
-//     ease: 'none',
-//   });
-// });
-
 ScrollTrigger.create({
   trigger: '#features',
-  markers: true,
   animation: gsap.to('[data-feature-divider]', { y: 200, stagger: 0.5, duration: 1, ease: 'none' }),
-  start: 'top 60%',
-  end: 'bottom 60%',
+  start: 'top 40%',
+  markers: true,
+  end: 'bottom bottom',
   scrub: 0.5,
   ease: 'none',
 });
+
+ScrollTrigger.create({
+  trigger: '#features-heading',
+  pin: true,
+  start: 'top 80%',
+  end: 'bottom bottom',
+  pinSpacing: false,
+  // scrub: 0.5,
+  // ease: 'none',
+});
+
+const miles = document.querySelector('#miles');
+
+var count = 50;
+var speed = 10;
+
+timer();
+
+function timer() {
+  count--;
+
+  miles.innerHTML = count; // watch for      spelling
+
+  if (count <= 0) {
+    return;
+  }
+
+  if (count < 20) speed = speed * 1.25;
+  setTimeout(timer, speed);
+}

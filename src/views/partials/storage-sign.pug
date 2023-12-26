@@ -6,6 +6,8 @@
 
 - const signSVG = `h-11 absolute right-8 top-4 md:h-14 lg:h-20 stroke-blackish`;
 
+- const milesContainer = `grid grid-cols-[40px,min-content] lg:grid-cols-[60px,min-content] justify-center`
+
 - const signBase = `bg-blackish w-2 lg:w-3`;
 
 //- storage sign container
@@ -28,7 +30,9 @@ div(class=signContainer)
   //- storage sign lower
   div(class=signOuterBox)
     .text-center(class=signInnerBox)
-      span 0 Miles
+      div(class=milesContainer)
+        span#miles 20
+        span Miles
 
   //- storage sign base
   div(class=signBase + " h-24 md:h-48")
