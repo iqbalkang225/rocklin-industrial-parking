@@ -1,0 +1,20 @@
+- const headerContainer = `font-accent h-screen relative`;
+
+- const customContainer = `container-custom flex flex-col h-full`;
+
+- const headingAndSignContainer = `flex-1 relative mt-8 md:mt-0 flex md:items-center`;
+
+header(class=headerContainer)
+  div(class=customContainer)
+    //- **** navigation ****
+    include navigation
+
+    //- **** heading and storage sign container ****
+    div(class=headingAndSignContainer)
+      //- **** header left side ****
+      include hero-text
+      //- **** header right side ****
+      include storage-sign
+
+    //- **** rolling tape ****
+    include rolling-tape

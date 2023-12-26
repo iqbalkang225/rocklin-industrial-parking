@@ -15,8 +15,8 @@ module.exports = {
     alias: {
       App: path.join(__dirname, 'src/app/'),
       Views: path.join(__dirname, 'src/views/'),
-      Images: path.join(__dirname, 'src/assets/images/'),
       Fonts: path.join(__dirname, 'src/assets/fonts/'),
+      images: path.join(__dirname, 'src/assets/images'),
       css: path.join(__dirname, 'src/assets/css'),
       js: path.join(__dirname, 'src/assets/js'),
     },
@@ -68,6 +68,10 @@ module.exports = {
       {
         test: /\.(css|sass|scss)$/,
         use: ['css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource',
       },
     ],
   },

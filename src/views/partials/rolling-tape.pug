@@ -1,0 +1,40 @@
+- const vehicles = ["Trucks", "Trailers", "RV's", "Boats"];
+
+- const rollingTapeContainer = `overflow-hidden w-full absolute left-0 bottom-6 md:bottom-12 -z-10 -rotate-2`;
+
+- const rollingTapeOuter = `h-8 w-full flex`;
+
+- const rollingTapeInner = `bg-accent flex items-center justify-around overflow-x-hidden gap-6 xl:gap-0 shrink-0 w-full`;
+
+- let leftTapeCount = 0;
+
+- let rightTapeCount = 0;
+
+- const repeat = 3;
+
+//- rolling tape
+div(class=rollingTapeContainer)
+  #rolling-tape(class=rollingTapeOuter)
+    //- rolling tape 1
+    div(class=rollingTapeInner)
+      while leftTapeCount < repeat
+        each vehicle in vehicles
+          span= vehicle
+          div
+            svg.fill-blackish.h-4(viewBox="0 0 31 12")
+              path(
+                d="M0 0H25.5759L30.4321 5.8363L25.5759 11.6726H0L4.85619 5.8363L0 0Z"
+              )
+        - leftTapeCount++;
+
+    //- rolling tape 2
+    div(class=rollingTapeInner)
+      while rightTapeCount < repeat
+        each vehicle in vehicles
+          span= vehicle
+          div
+            svg.fill-blackish.h-4(viewBox="0 0 31 12")
+              path(
+                d="M0 0H25.5759L30.4321 5.8363L25.5759 11.6726H0L4.85619 5.8363L0 0Z"
+              )
+        - rightTapeCount++;

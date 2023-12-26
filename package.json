@@ -24,6 +24,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.29",
+    "gsap": "^3.12.4",
     "postcss-preset-env": "^9.3.0"
   }
 }

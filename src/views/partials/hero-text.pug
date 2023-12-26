@@ -1,0 +1,16 @@
+- const headerHeading = `text-5xl sm:text-6xl lg:text-7xl`;
+
+- const headerButton = `font-body border border-blackish px-9 py-3 rounded-full`;
+
+- const headingArrowSVG = `h-4 fill-blackish`
+
+
+
+.space-y-4
+  //- heading arrows
+  .flex#heading-arrows
+    include heading-arrows
+
+  //- heading text and button
+  h1(class=headerHeading) We've got your <br /> storage needs <br /> covered!
+  button(class=headerButton) contact us

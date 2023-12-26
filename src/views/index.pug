@@ -1,19 +1,37 @@
+//- - const headingAndSignContainer = `md:grid grid-cols-2 flex-1 items-center relative`
+
 doctype html
 html(lang="en")
   head
-
-  //-  meta(charset="UTF-8")
-  //-  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     base(href="/")
 
-    title Trendiva
+    title Rocklin Industrial Parking Inc.
 
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&display=swap",
+      rel="stylesheet"
+    )
 
-    link(rel='stylesheet' href=require('css/styles.css'))
-    script(src=require('js/app.js') defer='defer')
+    link(rel="stylesheet", href=require("css/styles.css"))
+    script(src=require("js/app.js"), defer="defer")
 
-  body.bg-green-500
-    include partials/navigation
+  body.font-body.text-blackish
+    include partials/header
 
-    main.bg-red-400.h-screen.text-2xl
-      h1 welcome to the site
+    main
+      include pages/about
+
+    section(class=aboutContainer)#len
+
+      #about-left
+        div#headings
+        p Quis cillum dolore ex ut ullamco et dolor. Do duis Lorem commodo qui Lorem quis est et reprehenderit labore eiusmod aliquip aliquip fugiat officia. Consectetur ad excepteur mollit ea velit quis eiusmod incididunt consequat voluptate esse anim ea consectetur. Id minim est anim labore proident id aute elit incididunt sint cupidatat.
+        p Eu amet qui esse ea. Reprehenderit do minim dolore irure pariatur. Anim nisi elit minim incididunt consequat reprehenderit amet excepteur elit ut nostrud dolore et mollit enim. Cupidatat enim velit esse incididunt ut occaecat qui ut dolore enim magna. Non quis mollit non dolor qui eu consequat eiusmod sint labore adipisicing ea laboris sint mollit. Eu velit amet amet labore magna.
+
+      #about-right 
+        img(src=require("images/yard.png"), alt="")
+
