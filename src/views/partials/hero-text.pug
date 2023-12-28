@@ -6,13 +6,11 @@ include ../partials/section-heading
 
 //- - const headingArrowSVG = `h-4 fill-blackish`
 
-
-
-.space-y-4
+.space-y-4#hero-text
   //- heading arrows
 
-  +section-heading()
+  +section-heading
 
   //- heading text and button
   h1(class=headerHeading) We've got your <br /> storage needs <br /> covered!
-  button(class=headerButton) contact us
+  button(class=headerButton)#hero-btn contact us

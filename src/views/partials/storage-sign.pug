@@ -4,25 +4,33 @@
 
 - const signInnerBox = `border-blackish border rounded-2xl p-3 md:p-4 lg:p-6 relative`;
 
-- const signSVG = `h-11 absolute right-8 top-4 md:h-14 lg:h-20 stroke-blackish`;
+- const signSVGContainer = `h-11 absolute right-8 top-4 md:h-14 lg:h-20 stroke-blackish overflow-hidden`;
 
-- const milesContainer = `grid grid-cols-[40px,min-content] lg:grid-cols-[60px,min-content] justify-center`
+- const milesContainer = `grid grid-cols-[40px,min-content] lg:grid-cols-[60px,min-content] justify-center`;
 
 - const signBase = `bg-blackish w-2 lg:w-3`;
 
 //- storage sign container
-div(class=signContainer)
+div(class=signContainer)#storage-sign
   //- storage sign upper
   div(class=signOuterBox)
     div(class=signInnerBox)
       span Storage <br/> Area
-      svg(viewBox="0 0 124 108", class=signSVG)
-        path#arrow(
-          d="M10.7948 97.6354L113.766 20.0414M113.766 20.0414L104.249 87.7532M113.766 20.0414L46.0538 10.5251",
-          stroke-width="20",
-          stroke-linecap="round",
-          stroke-linejoin="round"
-        )
+      div(class=signSVGContainer)
+        svg#arrow1.h-full(viewBox="0 0 124 108")
+          path(
+            d="M10.7948 97.6354L113.766 20.0414M113.766 20.0414L104.249 87.7532M113.766 20.0414L46.0538 10.5251",
+            stroke-width="20",
+            stroke-linecap="round",
+            stroke-linejoin="round"
+          )
+        svg#arrow2.h-full.absolute.top-0.left-0(viewBox="0 0 124 108")
+          path(
+            d="M10.7948 97.6354L113.766 20.0414M113.766 20.0414L104.249 87.7532M113.766 20.0414L46.0538 10.5251",
+            stroke-width="20",
+            stroke-linecap="round",
+            stroke-linejoin="round"
+          )
 
   //- storage sign base
   .h-3(class=signBase)
@@ -31,7 +39,7 @@ div(class=signContainer)
   div(class=signOuterBox)
     .text-center(class=signInnerBox)
       div(class=milesContainer)
-        span#miles 20
+        span#miles 50
         span Miles
 
   //- storage sign base

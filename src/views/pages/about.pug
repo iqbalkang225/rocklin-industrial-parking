@@ -1,18 +1,16 @@
 include ../partials/section-heading
 
-- const aboutSection = `container-custom`
+- const aboutSection = `container-custom`;
 
-- const contentContainer = `grid lg:grid-cols-2 items-center gap-8 lg:gap-16`
+- const aboutContentContainer = `grid lg:grid-cols-2 gap-8 lg:gap-16`;
 
-section(class=aboutSection)#about
-
+section#about(class=aboutSection)
   +section-heading('About us')
 
-  div(class=contentContainer)
-
+  div(class=aboutContentContainer)
     #about-left.space-y-8
       p Quis cillum dolore ex ut ullamco et dolor. Do duis Lorem commodo qui Lorem quis est et reprehenderit labore eiusmod aliquip aliquip fugiat officia. Consectetur ad excepteur mollit ea velit quis eiusmod incididunt consequat voluptate esse anim ea consectetur. Id minim est anim labore proident id aute elit incididunt sint cupidatat.
       p Eu amet qui esse ea. Reprehenderit do minim dolore irure pariatur. Anim nisi elit minim incididunt consequat reprehenderit amet excepteur elit ut nostrud dolore et mollit enim. Cupidatat enim velit esse incididunt ut occaecat qui ut dolore enim magna. Non quis mollit non dolor qui eu consequat eiusmod sint labore adipisicing ea laboris sint mollit. Eu velit amet amet labore magna.
 
-    #about-right 
-      img(src=require("images/yard.png"), alt="")
+    #about-right
+      img(src=require("images/yard.svg"), alt="")

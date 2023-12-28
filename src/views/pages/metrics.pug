@@ -1,0 +1,14 @@
+
+- const metricsData = require("data/metricsData.json");
+
+- const metricsContentContainer = `container-custom flex flex-col md:flex-row`;
+
+- const metricItemContainer = `text-center space-y-4 border-blackish border [&:not(:last-child)]:border-b-0 md:[&:not(:last-child)]:border-b md:[&:not(:first-child)]:border-l-0 flex-1 py-[calc(3rem+3vw)]`
+
+section#metrics.bg-accent
+
+  div(class=metricsContentContainer)
+    each metric,index in metricsData
+      div(class=metricItemContainer)
+        h3(id="metric-" + (index+1)).text-5xl.font-accent= metric.title + `${index < 3 ? "+" : ""}`
+        p.font-semibold= metric.description

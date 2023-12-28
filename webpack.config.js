@@ -13,12 +13,13 @@ module.exports = {
   resolve: {
     // aliases used in sources of pug, scss, js
     alias: {
-      App: path.join(__dirname, 'src/app/'),
-      Views: path.join(__dirname, 'src/views/'),
-      Fonts: path.join(__dirname, 'src/assets/fonts/'),
+      // App: path.join(__dirname, 'src/app/'),
+      // Views: path.join(__dirname, 'src/views/'),
+      // Fonts: path.join(__dirname, 'src/assets/fonts/'),
       images: path.join(__dirname, 'src/assets/images'),
       css: path.join(__dirname, 'src/assets/css'),
       js: path.join(__dirname, 'src/assets/js'),
+      data: path.join(__dirname, 'src/assets/data'),
     },
   },
 
@@ -70,7 +71,7 @@ module.exports = {
         use: ['css-loader', 'postcss-loader'],
       },
       {
-        test: /\.png/,
+        test: /\.(jpe?g|png|gif|svg|woff2?|fnt|webp)$/,
         type: 'asset/resource',
       },
     ],
