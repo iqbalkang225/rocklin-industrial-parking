@@ -39,6 +39,8 @@ class Header extends DOMElements {
 
     const tl = gsap.timeline({ defaults: { ease: 'back' } });
 
+    const mm = gsap.matchMedia();
+
     tl.from(storageSign, {
       rotation: -45,
       transformOrigin: 'bottom',
@@ -47,10 +49,14 @@ class Header extends DOMElements {
         this.storageSignArrowAnimation();
       },
     })
-      .from(heroText, { y: 100 }, '<')
+      .from(heroText, { yPercent: 50 }, '<')
       .fromTo(heroBtn, { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, clearProps: 'all' }, '<+0.1')
       .from(navigation.children, { autoAlpha: 0, scale: 0.75 }, '<')
       .from(rollingTapeContainer, { y: 110 });
+
+    mm.add('(max-width: 768px)', () => {
+      tl.duration(2);
+    });
   }
 
   storageSignArrowAnimation() {
