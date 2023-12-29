@@ -5,6 +5,8 @@ gsap.registerPlugin(ScrollToPlugin);
 import DOMElements from '../DOMElements';
 
 class Navigation extends DOMElements {
+  animation = null;
+
   constructor() {
     super({
       selections: {
@@ -29,7 +31,7 @@ class Navigation extends DOMElements {
       link.addEventListener('mouseover', (e) => {
         gsap.set(this.elements.lines[index], { transformOrigin: 'left' });
 
-        gsap.to(this.elements.lines[index], { scaleX: 1 });
+        this.animation = gsap.to(this.elements.lines[index], { scaleX: 1 });
       });
 
       link.addEventListener('mouseout', (e) => {

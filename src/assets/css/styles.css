@@ -4,12 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .container-custom {
-    @apply container mx-auto px-2 md:px-0;
-  }
-}
-
 body {
   background: linear-gradient(90deg, #fcfcfd 0.13%, #fffbeb 98.88%);
 }

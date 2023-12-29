@@ -9,6 +9,7 @@ import Heading from './components.js/Heading';
 import Footer from './pages/Footer';
 import Navigation from './components.js/Navigation';
 import Highway from './pages/Highway';
+import About from './pages/About';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,7 @@ class App {
     const feature = new Feature();
     const metric = new Metric();
     const highway = new Highway();
+    const about = new About();
     const footer = new Footer();
   }
 

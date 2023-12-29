@@ -48,7 +48,7 @@ class Header extends DOMElements {
       },
     })
       .from(heroText, { y: 100 }, '<')
-      .from(heroBtn, { autoAlpha: 0, scale: 0.5, clearProps: 'all' }, '<+0.1')
+      .fromTo(heroBtn, { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, clearProps: 'all' }, '<+0.1')
       .from(navigation.children, { autoAlpha: 0, scale: 0.75 }, '<')
       .from(rollingTapeContainer, { y: 110 });
   }
