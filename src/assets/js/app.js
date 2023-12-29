@@ -31,7 +31,7 @@ class App {
     const header = new Header();
     const feature = new Feature();
     const metric = new Metric();
-    // const highway = new Highway();
+    const highway = new Highway();
     const footer = new Footer();
   }
 
