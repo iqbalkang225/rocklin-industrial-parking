@@ -20,6 +20,6 @@ nav(class=nav)#navigation
 
   ul(class=navList)
     each link in linksData
-      li
-        a(href=link.url).link= link.link
-          .w-full.h-1.bg-blackish.scale-x-0(data-line)
+      li.relative.link
+        a(href=link.url)= link.link
+        .w-full.h-1.bg-blackish.scale-x-0.absolute.pointer-events-none.left-0(data-line)

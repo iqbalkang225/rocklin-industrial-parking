@@ -28,16 +28,16 @@ class Navigation extends DOMElements {
         gsap.to(window, { scrollTo: href });
       });
 
-      link.addEventListener('mouseover', (e) => {
+      link.addEventListener('mouseenter', (e) => {
         gsap.set(this.elements.lines[index], { transformOrigin: 'left' });
 
-        this.animation = gsap.to(this.elements.lines[index], { scaleX: 1 });
+        this.animation = gsap.to(this.elements.lines[index], { scaleX: 1, ease: 'power4' });
       });
 
-      link.addEventListener('mouseout', (e) => {
+      link.addEventListener('mouseleave', (e) => {
         gsap.set(this.elements.lines[index], { transformOrigin: 'right' });
 
-        gsap.to(this.elements.lines[index], { scaleX: 0 });
+        gsap.to(this.elements.lines[index], { scaleX: 0, ease: 'power4' });
       });
     });
   }
