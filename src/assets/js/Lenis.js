@@ -1,4 +1,5 @@
 import Lenis from '@studio-freight/lenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 class LenisScroll {
   constructor() {}
@@ -8,9 +9,7 @@ class LenisScroll {
       wheelMultiplier: 0.75,
     });
 
-    lenis.on('scroll', (e) => {
-      // console.log(e);
-    });
+    lenis.on('scroll', ScrollTrigger.update);
 
     function raf(time) {
       lenis.raf(time);

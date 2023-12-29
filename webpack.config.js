@@ -71,7 +71,7 @@ module.exports = {
         use: ['css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|woff2?|fnt|webp)$/,
+        test: /\.(jpe?g|png|gif|svg|woff2?|fnt|ico|webp)$/,
         type: 'asset/resource',
       },
     ],

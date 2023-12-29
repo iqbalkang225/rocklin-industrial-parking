@@ -2,7 +2,7 @@ include ../partials/section-heading
 
 - const headerHeading = `text-4xl sm:text-6xl lg:text-7xl`;
 
-- const headerButton = `font-body border border-blackish px-9 py-3 rounded-full`;
+- const headerButton = `font-body border border-blackish px-9 py-3 rounded-full inline-block hover:bg-accent active:scale-95 duration-100`;
 
 //- - const headingArrowSVG = `h-4 fill-blackish`
 
@@ -13,4 +13,4 @@ include ../partials/section-heading
 
   //- heading text and button
   h1(class=headerHeading) We've got your <br /> storage needs <br /> covered!
-  button(class=headerButton)#hero-btn contact us
+  button(href="tel:916-918-5944" class=headerButton)#hero-btn Contact us

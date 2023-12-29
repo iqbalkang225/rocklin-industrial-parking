@@ -9,6 +9,6 @@
   },
   {
     "title": "Phone",
-    "description": "916-918-5944 &nbsp; &nbsp; &nbsp; &nbsp;  806-317-3804"
+    "description": ["916-918-5944", "806-317-3804"]
   }
 ]

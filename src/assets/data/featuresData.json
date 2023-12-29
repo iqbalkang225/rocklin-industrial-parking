@@ -1,26 +1,31 @@
 [
   {
     "title": "Secured Yard",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
+    "description": "Our parking yard is equipped with secure fencing and gated entry point, adding an extra layer of protection to your parked vehicles."
   },
   {
     "title": "Well-lit Lot",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
+    "description": "Safety is a top priority at our parking yard. We have well-placed lighting throughout the premise to ensure visibility and provide a secure environment for our customers."
   },
   {
-    "title": "Video surveillance",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
+    "title": "Video Surveillance",
+    "description": "Our parking yard features a state-of-the-art CCTV surveillance system. Our cameras operate round-the-clock, ensuring constant monitoring and providing peace of mind."
   },
+
   {
-    "title": "Dedicated Spots",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
-  },
-  {
-    "title": "Dedicated Spots",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
+    "title": "Bilingual Staff",
+    "description": "Our friendly staff is fluent in multiple languages, providing a comfortable and accessible experience for customers who prefer to communicate in their native language."
   },
   {
     "title": "Dedicated Spots",
-    "description": "Commodo mollit nulla laborum adipisicing Lorem dolore cupidatat nisi nisi sint enim ut eiusmod. Amet duis irure Lorem est do. Sunt quis ex cupidatat laborum nulla magna."
+    "description": "No more worries about arriving late or struggling to find parking. Your exclusive spot is guaranteed and no one else will take it."
+  },
+  {
+    "title": "Access Control System",
+    "description": "With our access control measures, only authorized individuals have entry access, maintaining a secure environment."
+  },
+  {
+    "title": "Flexible Rental Options",
+    "description": "We understand that different customers have different needs. That's why we offer flexible rental options, allowing you to choose between short-term or long-term parking contracts."
   }
 ]

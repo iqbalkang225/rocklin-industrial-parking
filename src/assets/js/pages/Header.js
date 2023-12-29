@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 
-import DOMElements from './DOMElements';
-import Utils from './Utils';
+import DOMElements from '../DOMElements';
+import Utils from '../Utils';
 
 class Header extends DOMElements {
   constructor() {
@@ -23,10 +23,7 @@ class Header extends DOMElements {
 
     this.rollTape();
 
-    // this.storageSignArrowAnimation();
-
-    this.utils = new Utils(this.elements.miles, 50, 10);
-    // this.utils.startCounting();
+    this.utils = new Utils(this.elements.miles, 50, 10, 0, 20, 'down');
   }
 
   rollTape() {
@@ -51,9 +48,9 @@ class Header extends DOMElements {
       },
     })
       .from(heroText, { y: 100 }, '<')
-      .from(heroBtn, { autoAlpha: 0, scale: 0.5 }, '<+0.1')
+      .from(heroBtn, { autoAlpha: 0, scale: 0.5, clearProps: 'all' }, '<+0.1')
       .from(navigation.children, { autoAlpha: 0, scale: 0.75 }, '<')
-      .from(rollingTapeContainer, { y: 100 });
+      .from(rollingTapeContainer, { y: 110 });
   }
 
   storageSignArrowAnimation() {

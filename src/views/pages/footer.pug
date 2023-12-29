@@ -6,32 +6,56 @@
 
 - const contactHeading = `text-xl text-right lg:text-left font-accent group-hover:translate-y-2 duration-150`
 
-- const contactDescription = `text-right group-hover:-translate-y-2 duration-150`
+- const contactDescription = `text-right hover:underline`
 
 - const footerLogoAndCopyright = `flex flex-col gap-4 lg:flex-row justify-between items-end`
 
-- const footerCopyright = `text-right lg:text-left order-1 lg:-order-1`
+- const footerCopyright = `text-xs text-right lg:text-left order-1 lg:-order-1`
+
+- const footerLinkedIn = `hover:underline font-bold`
 
 - const footerLogo = `text-5xl font-accent text-right relative`
 
-- const SVG = `fill-accent h-6 absolute translate-y-1/2 translate-x-1/2`
+- const SVGContainer = `fill-accent h-6 absolute translate-y-1/2 translate-x-1/2 overflow-hidden`
+
+- const absoluteSVG = ` h-full absolute top-0`
 
 
 section#footer.bg-blackish.text-white
 
   div.container-custom
     div(class=footerContactsContainer)
-      each metric,index in footerData
+    
+      each metric in footerData
         div(class=contactItemContainer)
           h3(class=contactHeading)= metric.title
           div.h-px.w-full.bg-white
-          p(class=contactDescription)!= metric.description
+
+          if(metric.title === 'Phone')
+            each desc in metric.description
+              a(href=`tel:${desc}` target="_blank" class=contactDescription).block
+                p!= desc
+
+          else if(metric.title === 'Email')
+            a(href="mailto:rocklinindustrialpark@gmail.com" target="_blank" class=contactDescription).block
+              p!= metric.description
+          
+          else 
+            a(href="https://maps.app.goo.gl/7RjpBtsKD7VoKM2G7" target="_blank" class=contactDescription).block
+              p!= metric.description
+
 
     div(class=footerLogoAndCopyright)
-      p(class=footerCopyright) © 2023  All Rights reserved <br /> Website by Iqbal S Kang
+      div(class=footerCopyright)
+        p © 2023  All Rights reserved
+        p Website by 
+          a(href="https://www.linkedin.com/in/iqbalkang225/" class=footerLinkedIn) Iqbal S Kang
 
       div.text-5xl.font-accent.text-right.relative
         h2 Rocklin Industrial
-        svg(viewBox="0 0 31 12" class=SVG)
-          path(id="Rectangle 8" d="M0 0H25.5759L30.4321 5.8363L25.5759 11.6726H0L4.85619 5.8363L0 0Z")
+          div(class=SVGContainer)#svg-container
+            svg(viewBox="0 0 31 12").h-full#relative-svg
+              path(id="Rectangle 8" d="M0 0H25.5759L30.4321 5.8363L25.5759 11.6726H0L4.85619 5.8363L0 0Z")
+            svg(viewBox="0 0 31 12" class=absoluteSVG)#absolute-svg
+              path(id="Rectangle 8" d="M0 0H25.5759L30.4321 5.8363L25.5759 11.6726H0L4.85619 5.8363L0 0Z")
         h2 Parking Inc.

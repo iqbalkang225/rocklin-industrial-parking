@@ -10,5 +10,8 @@ section#metrics.bg-accent
   div(class=metricsContentContainer)
     each metric,index in metricsData
       div(class=metricItemContainer)
-        h3(id="metric-" + (index+1)).text-5xl.font-accent= metric.title + `${index < 3 ? "+" : ""}`
+        div.text-5xl.font-accent.flex.justify-center
+          h3(id="metric-" + (index+1))= metric.title
+          span= index < 3 ? "+" : ""
         p.font-semibold= metric.description
+
