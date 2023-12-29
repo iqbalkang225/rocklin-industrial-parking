@@ -4,10 +4,18 @@ import DOMElements from '../DOMElements';
 import Utils from '../Utils';
 
 class Header extends DOMElements {
+  vehicles = ['Trucks', 'Trailers', "RV's", 'Boats'];
+
+  repeat = 3;
+
+  count = 0;
+
   constructor() {
     super({
       selections: {
         rollingTape: '#rolling-tape',
+        rollingTapeLeft: '#rolling-tape-left',
+        rollingTapeRight: '#rolling-tape-right',
         storageSign: '#storage-sign',
         rollingTapeContainer: '#rolling-tape-container',
         heroText: '#hero-text',
